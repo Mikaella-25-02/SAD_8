@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lab8kotlin.MainActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_main_where_to_follow"
+                    android:textColor="#000" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.example.lab8kotlin.DelayAutoCompleteTextView
+                        android:id="@+id/edit_where_to_follow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/activity_main_location"
+                        android:imeOptions="flagNoExtractUi|actionSearch"
+                        android:inputType="textCapWords"
+                        android:maxLength="40"
+                        android:minLines="3"
+                        android:padding="5dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar1"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/edit_where_to_follow"
+                        android:layout_alignRight="@id/edit_where_to_follow"
+                        android:layout_alignBottom="@id/edit_where_to_follow"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <fragment
+                    android:id="@+id/map1"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_main_where_to_go"
+                    android:textColor="#000" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.example.lab8kotlin.DelayAutoCompleteTextView
+                        android:id="@+id/edit_where_to_go"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/activity_main_location"
+                        android:imeOptions="flagNoExtractUi|actionSearch"
+                        android:inputType="textCapWords"
+                        android:maxLength="40"
+                        android:minLines="3"
+                        android:padding="5dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar2"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/edit_where_to_go"
+                        android:layout_alignRight="@id/edit_where_to_go"
+                        android:layout_alignBottom="@id/edit_where_to_go"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <fragment
+                    android:id="@+id/map2"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/btn_search"
+            android:padding="20dp"
+            android:text="@string/search"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

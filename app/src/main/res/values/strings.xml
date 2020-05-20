@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab8Kotlin</string>
+    <string name="search">Построение маршрута    🔎</string>
+    <string name="activity_main_where_to_follow">Откуда</string>
+    <string name="activity_main_where_to_go">Куда</string>
+    <string name="activity_main_location">Введите местоположение</string>
+
+
+</resources>
